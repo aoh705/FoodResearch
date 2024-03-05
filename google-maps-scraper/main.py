@@ -1,9 +1,7 @@
 from src import Gmaps
 
-love_it_star_it = '''Love It? Star It! ⭐ https://github.com/omkarcloud/google-maps-scraper/'''
-
 queries = [
-   "web developers in bangalore"
+   "Springbone Kitchen"
 ]
 
-Gmaps.places(queries, max=5)
+Gmaps.places(queries, scrape_reviews=True, reviews_max=Gmaps.ALL_REVIEWS)
