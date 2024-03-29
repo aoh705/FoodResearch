@@ -1,7 +1,7 @@
 from src import Gmaps
 
 queries = [
-   "Springbone Kitchen"
+   "Forsyth Fire Escape"
 ]
 
 Gmaps.places(queries, scrape_reviews=True, reviews_max=Gmaps.ALL_REVIEWS)
