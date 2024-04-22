@@ -1,7 +1,7 @@
 from src import Gmaps
 
 queries = [
-   "Golden Wuish"
+   "Woorijip nyc"
 ]
 
 Gmaps.places(queries, scrape_reviews=True, reviews_max=Gmaps.ALL_REVIEWS)
