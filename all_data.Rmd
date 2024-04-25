@@ -1,0 +1,208 @@
+---
+title: "EDS_finalproject"
+author: "A.Oh"
+date: "2024-04-25"
+output: html_document
+---
+Install required libraries:
+```{r}
+library(readr)
+```
+
+Get all data:
+```{r}
+# woorijip
+woorijip <- read.csv('altdata/woorijip.csv')
+
+# ayada
+ayada <- read.csv('altdata/ayada.csv')
+
+# cho-dang-gol
+cdg <- read.csv('altdata/cdg.csv')
+
+# juniper
+juniper <- read.csv('altdata/juniper.csv')
+
+# kam hing
+kamhing <- read.csv('altdata/kamhing.csv')
+
+# lafayette
+lafayette <- read.csv('altdata/lafayette.csv')
+
+# meilaiwah
+meilaiwah <- read.csv('altdata/meilaiwah.csv')
+
+# anthony and sonne panini shoppe
+panini <- read.csv('altdata/panini.csv')
+
+# shu-jiao-fu-zhou
+shujiao <- read.csv('altdata/shujiao.csv')
+
+# raku
+raku <- read.csv('altdata/raku.csv')
+
+# atoboy
+atoboy <- read.csv('altdata/atoboy.csv')
+
+# sey coffee
+sey <- read.csv('altdata/sey.csv')
+```
+
+Perform Wilcoxon rank-sum on all datasets:
+- woorijip
+```{r}
+w_year <- 2021
+
+before_data <- subset(woorijip, woorijip['published_at_date'] < w_year)
+after_data <- subset(woorijip, woorijip['published_at_date'] >= w_year)
+
+before_data$review_sentiment <- as.numeric(before_data$review_sentiment)
+after_data$review_sentiment <- as.numeric(after_data$review_sentiment)
+
+result <- wilcox.test(before_data$review_sentiment, after_data$review_sentiment)
+result
+```
+- ayada
+```{r}
+ay_year <- 2022
+
+before_data <- subset(ayada, ayada['published_at_date'] < ay_year)
+after_data <- subset(ayada, ayada['published_at_date'] >= ay_year)
+
+before_data$review_sentiment <- as.numeric(before_data$review_sentiment)
+after_data$review_sentiment <- as.numeric(after_data$review_sentiment)
+
+result <- wilcox.test(before_data$review_sentiment, after_data$review_sentiment)
+result
+```
+- cho-dang-gol
+```{r}
+c_year <- 2016
+
+before_data <- subset(cdg, cdg['published_at_date'] < c_year)
+after_data <- subset(cdg, cdg['published_at_date'] >= c_year)
+
+before_data$review_sentiment <- as.numeric(before_data$review_sentiment)
+after_data$review_sentiment <- as.numeric(after_data$review_sentiment)
+
+result <- wilcox.test(before_data$review_sentiment, after_data$review_sentiment)
+result
+```
+- juniper
+```{r}
+j_year <- 2017
+
+before_data <- subset(juniper, juniper['published_at_date'] < j_year)
+after_data <- subset(juniper, juniper['published_at_date'] >= j_year)
+
+before_data$review_sentiment <- as.numeric(before_data$review_sentiment)
+after_data$review_sentiment <- as.numeric(after_data$review_sentiment)
+
+result <- wilcox.test(before_data$review_sentiment, after_data$review_sentiment)
+result
+```
+- Kam Hing Bakery
+```{r}
+kh_year <- 2020
+
+before_data <- subset(kamhing, kamhing['published_at_date'] < kh_year)
+after_data <- subset(kamhing, juniper['published_at_date'] >= kh_year)
+
+before_data$review_sentiment <- as.numeric(before_data$review_sentiment)
+after_data$review_sentiment <- as.numeric(after_data$review_sentiment)
+
+result <- wilcox.test(before_data$review_sentiment, after_data$review_sentiment)
+result
+```
+- lafayette
+```{r}
+ly_year <- 2022
+
+before_data <- subset(lafayette, lafayette['published_at_date'] < ly_year)
+after_data <- subset(lafayette, lafayette['published_at_date'] >= ly_year)
+
+before_data$review_sentiment <- as.numeric(before_data$review_sentiment)
+after_data$review_sentiment <- as.numeric(after_data$review_sentiment)
+
+result <- wilcox.test(before_data$review_sentiment, after_data$review_sentiment)
+result
+```
+- Mei Lai Wah
+```{r}
+m_year <- 2020
+
+before_data <- subset(meilaiwah, meilaiwah['published_at_date'] < m_year)
+after_data <- subset(meilaiwah, meilaiwah['published_at_date'] >= m_year)
+
+before_data$review_sentiment <- as.numeric(before_data$review_sentiment)
+after_data$review_sentiment <- as.numeric(after_data$review_sentiment)
+
+result <- wilcox.test(before_data$review_sentiment, after_data$review_sentiment)
+result
+```
+- Anthony and Sonne Panini Shoppe
+```{r}
+p_year <- 2020
+
+before_data <- subset(panini, panini['published_at_date'] < p_year)
+after_data <- subset(panini, panini['published_at_date'] >= p_year)
+
+before_data$review_sentiment <- as.numeric(before_data$review_sentiment)
+after_data$review_sentiment <- as.numeric(after_data$review_sentiment)
+
+result <- wilcox.test(before_data$review_sentiment, after_data$review_sentiment)
+result
+```
+- Raku
+```{r}
+r_year <- 2018
+
+before_data <- subset(raku, raku['published_at_date'] < r_year)
+after_data <- subset(raku, raku['published_at_date'] >= r_year)
+
+before_data$review_sentiment <- as.numeric(before_data$review_sentiment)
+after_data$review_sentiment <- as.numeric(after_data$review_sentiment)
+
+result <- wilcox.test(before_data$review_sentiment, after_data$review_sentiment)
+result
+```
+- Sey Coffee
+```{r}
+sey_year <- 2019
+
+before_data <- subset(sey, sey['published_at_date'] < sey_year)
+after_data <- subset(sey, sey['published_at_date'] >= sey_year)
+
+before_data$review_sentiment <- as.numeric(before_data$review_sentiment)
+after_data$review_sentiment <- as.numeric(after_data$review_sentiment)
+
+result <- wilcox.test(before_data$review_sentiment, after_data$review_sentiment)
+result
+```
+- Shu Jiao Fu Zhou
+```{r}
+sj_year <- 2022
+
+before_data <- subset(shujiao, shujiao['published_at_date'] < sj_year)
+after_data <- subset(shujiao, shujiao['published_at_date'] >= sj_year)
+
+before_data$review_sentiment <- as.numeric(before_data$review_sentiment)
+after_data$review_sentiment <- as.numeric(after_data$review_sentiment)
+
+result <- wilcox.test(before_data$review_sentiment, after_data$review_sentiment)
+result
+```
+- Atoboy
+```{r}
+at_year <- 2019
+
+before_data <- subset(atoboy, atoboy['published_at_date'] < at_year)
+after_data <- subset(atoboy, atoboy['published_at_date'] >= at_year)
+
+before_data$review_sentiment <- as.numeric(before_data$review_sentiment)
+after_data$review_sentiment <- as.numeric(after_data$review_sentiment)
+
+result <- wilcox.test(before_data$review_sentiment, after_data$review_sentiment)
+result
+```
+
