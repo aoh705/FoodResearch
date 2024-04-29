@@ -14,8 +14,11 @@
 -  cleaning and pre-processing of data
     -  Using NTLK module for eliminating stopwords and reducing words to their simplest form
     -  Calculating sentiment of review text provided in the dataset
-    -  Fitting review text to Tf-Idf and 
+    -  Fitting review text to Tf-Idf and SVM model
 -  statistical analysis of sentiment using Wilcoxon rank-sum test in the .Rmd file
 
 # Setting Up Your Environment:
-1. After setting up this repository locally, 
+1. After setting up this repository locally, create a virtual environment with Python.
+2. After creating a virtual environment, in your command line, type: `pip install -r requirements.txt`
+This should install all the needed modules and packages to execute this code.
+3. You are ready to execute the code in this repository. Good luck!
