@@ -18,7 +18,13 @@
 -  statistical analysis of sentiment using Wilcoxon rank-sum test in the .Rmd file
 
 # Setting Up Your Environment:
+## Python Notebooks
 1. After setting up this repository locally, create a virtual environment with Python.
 2. After creating a virtual environment, in your command line, type: `pip install -r requirements.txt`
 This should install all the needed modules and packages to execute this code.
 3. You are ready to execute the code in this repository. Good luck!
+
+## R Markdown
+1. For the `all_data.Rmd` file, it is ideal to open this Markdown file with Rstudio to run.
+2. Once you open RStudio, please open this file.
+3. Run the entire file to conduct all tests.
