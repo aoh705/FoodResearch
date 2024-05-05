@@ -9,13 +9,14 @@
 -  Code (All of the code is located in this Github repository).
 
 ### What our code produces:
--  loading of data from .csv files
+-  loading of data from .csv files (in the 'data' file)
 -  exploring a few columns from datasets
 -  cleaning and pre-processing of data
     -  Using NTLK module for eliminating stopwords and reducing words to their simplest form
     -  Calculating sentiment of review text provided in the dataset
     -  Fitting review text to Tf-Idf and SVM model
 -  statistical analysis of sentiment using Wilcoxon rank-sum test in the .Rmd file
+-  creation of a new .csv file for each cleaned dataset (in 'altdata' file)
 
 # Setting Up Your Environment:
 ## Python Notebooks
