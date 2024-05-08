@@ -1,1 +1,3 @@
-trend graphs go here
+trend graphs go in this folder.
+
+The graphs were created in Tableau, and the tables were created on Google Docs.
